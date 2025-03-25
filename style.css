@@ -1,0 +1,138 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #004aad, #cb6ce6);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    justify-content: center;
+}
+
+nav {
+    background-color: #8c52ff;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav button {
+    background-color: white;
+    color: #8c52ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px 20px 40px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 80px;
+}
+
+.hero-text {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.label-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: 220px;
+}
+
+.label-container label {
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.label-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 5px; 
+}
+
+.label-container .blue-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.label-container .purple-button {
+    background-color: #8c52ff;
+    color: white;
+}
+
+.label-container textarea {
+    width: 100%;
+    min-height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: vertical;
+    color: black;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.label-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: black;
+    box-sizing: border-box;
+    height: 40px;
+}
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin-top: -15px;
+    }
+    .label-container {
+        width: 95%;
+    }
+    .hero-text{
+        font-size: 1.5em;
+    }
+}
