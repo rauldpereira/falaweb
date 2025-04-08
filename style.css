@@ -59,6 +59,8 @@ main {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 50%;
+
+    height: 400px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -122,6 +124,16 @@ main {
     box-sizing: border-box;
     height: 40px;
 }
+
+.libras-output{
+    width: 400px;   
+    height: 400px; 
+    background-color: #fff; 
+    border: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+
 @media (max-width: 768px) {
     main {
         flex-direction: column;

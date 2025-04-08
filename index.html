@@ -14,29 +14,31 @@
         <button>Login</button>
     </nav>
 
-    <main>
-        <div class="hero-text">
-            Transforme voz em texto e texto em voz de maneira simples
-        </div>
+  <main>
+    <div class="hero-text">
+      Transforme voz em texto e texto em voz de maneira simples
+    </div>
 
-        <div class="label-container">
-            <label for="voice-to-text">Voz para Texto</label>
-            <button class="blue-button"><i class="fas fa-microphone"></i> Iniciar Gravação</button>
-            <textarea id="voice-to-text" placeholder="O texto da sua voz aparecerá aqui..."></textarea>
-        </div>
+    <div class="label-container">
+      <label for="voice-to-text">Voz para Texto</label>
+      <button class="blue-button"><i class="fas fa-microphone"></i> Iniciar Gravação</button>
+      <textarea id="voice-to-text" placeholder="O texto da sua voz aparecerá aqui..."></textarea>
+    </div>
 
-        <div class="label-container">
-            <label for="text-to-voice">Texto para Voz</label>
-            <textarea id="text-to-voice" placeholder="Digite o texto que deseja transformar em voz..."></textarea>
-            <select id="voice-select">
-                <option value="">Selecione uma voz</option>
-                <option value="voice1">Voz 1</option>
-                <option value="voice2">Voz 2</option>
-                <option value="voice3">Voz 3</option>
-            </select>
-            <button class="purple-button"><i class="fas fa-volume-up"></i> Falar Texto</button>
-        </div>
-    </main>
+    <div class="label-container">
+      <label for="text-to-voice">Texto para Voz</label>
+      <textarea id="text-to-voice" placeholder="Digite o texto que deseja transformar em voz..."></textarea>
+      <select id="voice-select"></select>
+      <button class="purple-button"><i class="fas fa-volume-up"></i> Falar Texto</button>
+    </div>
+
+    <div class="label-container">
+      <label for="voice-to-libras">Voz para Libras</label>
+      <button class="green-button"><i class="fas fa-sign-language"></i> Traduzir Voz para Libras</button>
+      <div id="libras-output" class="libras-output"></div>
+    </div>
+  </main>
+    <script src="script.js"></script>
 
 </body>
 </html>
