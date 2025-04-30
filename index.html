@@ -32,13 +32,17 @@
       <button class="purple-button"><i class="fas fa-volume-up"></i> Falar Texto</button>
     </div>
 
-    <div class="label-container">
-      <label for="voice-to-libras">Voz para Libras</label>
-      <button class="green-button"><i class="fas fa-sign-language"></i> Traduzir Voz para Libras</button>
-      <div id="libras-output" class="libras-output"></div>
-    </div>
   </main>
     <script src="script.js"></script>
-
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 </html>
