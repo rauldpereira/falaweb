@@ -1,6 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
     const voiceToTextButton = document.querySelector('.blue-button');
     const voiceToTextTextArea = document.getElementById('voice-to-text');
+
+    const copyForVLibrasButton = document.getElementById('copy-for-vlibras-btn');
+
+    if (copyForVLibrasButton && voiceToTextTextArea) {
+        copyForVLibrasButton.addEventListener('click', () => {
+            const textToCopy = voiceToTextTextArea.value;
+
+            if (textToCopy.trim() !== "") {
+                navigator.clipboard.writeText(textToCopy)
+                    .then(() => {
+                      const vlibrasActivationButton = document.querySelector('div[vw-access-button]');
+                      if (vlibrasActivationButton) {
+                          vlibrasActivationButton.click();
+                      }
+                    })
+                    .catch(err => {
+                        console.error('Falha ao copiar texto: ', err);
+                        alert('Erro ao copiar o texto. Por favor, tente copiar manualmente (Ctrl+C).');
+                    });
+            } else {
+                alert('Não há texto para copiar. Grave sua voz primeiro.');
+            }
+        });
+    } else {
+        if (!copyForVLibrasButton) console.warn("Botão 'copy-for-vlibras-btn' não encontrado.");
+        if (!voiceToTextTextArea) console.warn("Textarea 'voice-to-text' não encontrada.");
+    }
+
   
     if ('webkitSpeechRecognition' in window) {
       const recognition = new webkitSpeechRecognition();
