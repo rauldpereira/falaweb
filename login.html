@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <body>
+        <nav>
+            <a href="login.html" id="auth-link">
+                <button id="auth-button">Login</button>
+            </a>
+        </nav>
+
+        <div class="login-container">
+            <div class="login-modal">
+                <h2>Login</h2>
+                <form action="/login" method="post">
+                    <label for="email" class="sr-only">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+
+                    <label for="senha" class="sr-only">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Senha" required>
+
+                    <button type="submit">Entrar</button>
+                </form>
+                <p>Caso não tenha login, clique <a href="cadastro.html">aqui</a>.</p>
+            </div>
+        </div>
+    </body>
+
+</html>
